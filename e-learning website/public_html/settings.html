@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Settings | E-Learning</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn-themes.thinkific.com/217884/300932/script.min-1571234522.js"></script>
+        
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                     <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-blackboard"></span> E-Learning</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href = "cart.html"><span class = "glyphicon glyphicon-dashboard"></span> Dashboard </a></li>
+                        <li><a href = "settings.html"><span class = "glyphicon glyphicon-user"></span> Settings</a></li>
+                        <li><a href = "login.html"><span class = "glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="content">
+             <div class="overlay"></div>
+  <div id="snowflakeContainer">
+    <p class="snowflake">*</p>
+</div>
+              <script>
+function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,!1),window.addEventListener("resize",setResetFlag,!1)}function getSupportedPropertyName(a){for(var b=0;b<a.length;b++)if("undefined"!=typeof document.body.style[a[b]])return a[b];return null}function Snowflake(a,b,c,d){this.element=a,this.speed=b,this.xPos=c,this.yPos=d,this.counter=0,this.sign=Math.random()<.5?1:-1,this.element.style.opacity=.1+Math.random(),this.element.style.fontSize=12+50*Math.random()+"px"}function setTranslate3DTransform(a,b,c){var d="translate3d("+b+"px, "+c+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var a=document.querySelector(".snowflake"),b=a.parentNode;browserWidth=document.documentElement.clientWidth,browserHeight=document.documentElement.clientHeight;for(var c=0;c<numberOfSnowflakes;c++){var d=a.cloneNode(!0);b.appendChild(d);var e=getPosition(50,browserWidth),f=getPosition(50,browserHeight),g=5+40*Math.random(),h=new Snowflake(d,g,e,f);snowflakes.push(h)}b.removeChild(a),moveSnowflakes()}function moveSnowflakes(){for(var a=0;a<snowflakes.length;a++){var b=snowflakes[a];b.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth,browserHeight=document.documentElement.clientHeight;for(var a=0;a<snowflakes.length;a++){var b=snowflakes[a];b.xPos=getPosition(50,browserWidth),b.yPos=getPosition(50,browserHeight)}resetPosition=!1}requestAnimationFrame(moveSnowflakes)}function getPosition(a,b){return Math.round(-1*a+Math.random()*(b+2*a))}function setResetFlag(a){resetPosition=!0}var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame,transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"],transformProperty=getSupportedPropertyName(transforms),snowflakes=[],browserWidth,browserHeight,numberOfSnowflakes=50,resetPosition=!1;setup(),Snowflake.prototype.update=function(){this.counter+=this.speed/5e3,this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40,this.yPos+=Math.sin(this.counter)/40+this.speed/30,setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos)),this.yPos>browserHeight&&(this.yPos=-50)};
+</script>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4" id="settings-container">
+                    <h4>Change Password</h4>
+                    <form action="settings_script.html" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name"  placeholder="change username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone number"  placeholder="change phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="old-password"  placeholder="Old Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="New Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password1"  placeholder="Re-type New Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="dropdown" class="form-control" name="password1"  placeholder="Re-type New Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Change</button>
+                        
+                    </form>
+<a href="index.html" style="text-decoration: none;">
+<center><span class="btn btn-primary btn-lg active">Back</span>
+				</center>
+			</a>
+                </div>
+            </div>
+    </div>
+
+        <footer>
+            <div class="container">
+                <center>
+                     <p>Copyright &copy; E-Learning. All Rights Reserved  | Contact Us:<span class="fa fa-whatsapp"> +91 90000 00000</span>| Follow us on : <span class="fa fa-facebook"><a href="https://facebook.com/">  elearning_training | </a></span><span class="fa fa-instagram"><a href="https://intagram.com/"> elearning_training | </a></span><span class="fa fa-twitter"><a href="https://twitter.com/"> elearning_training | </a></span></p>		
+                </center>
+            </div>
+        </footer>
+    </body>
+</html>
